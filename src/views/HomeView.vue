@@ -1,5 +1,4 @@
 <script setup>
-import { skills } from '../data/skills.js'
 import { education } from '../data/education.js'
 </script>
 
@@ -21,17 +20,16 @@ import { education } from '../data/education.js'
 				</div>
 				<div id="intro" class="flex leading-relaxed lg:col-span-2 h-[100%]">
 					<p class="text-black md:w-[80%] text-justify text-xl self-center">
-						Web Developer with a strong technical background and extensive
-						experience in front-end technologies such as HTML, CSS, and
-						JavaScript. Proficient in creating responsive, user-friendly web
-						applications with a focus on design and usability. Skilled in
-						managing both SQL and NoSQL databases. Experienced in working with
-						cross-functional teams to deliver high-quality solutions that meet
-						and exceed client expectations. Expertise in implementing
-						promotional features, troubleshooting technical issues, and
-						monitoring performance metrics. Dedicated to staying current with
-						the latest web development trends and technologies to foster
-						innovation and continuous improvement.
+						Dynamic and detail-oriented Web Developer with progressive
+						experience in designing, developing, and maintaining robust websites
+						and applications. Proficient in an array of programming languages
+						and frameworks, including JavaScript, Vue.js, React, and PHP for
+						WordPress. Known for delivering client-focused solutions, enhancing
+						user experiences, and driving business growth through innovative web
+						strategies. Adept at collaborating with cross-functional teams to
+						define project requirements, troubleshoot complex issues, and ensure
+						the successful deployment of high-performance, scalable web
+						solutions.
 					</p>
 				</div>
 			</section>
@@ -97,6 +95,11 @@ import { education } from '../data/education.js'
 							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 						>
 							SASS
+						</li>
+						<li
+							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+						>
+							CSS
 						</li>
 						<li
 							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
