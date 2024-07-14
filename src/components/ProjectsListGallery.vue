@@ -33,8 +33,7 @@
 				data-aos="fade-up"
 				data-aos-duration="3000"
 				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
-				disabled
-				to="/"
+				to="/gotta_go_ottawa"
 				>Gotta Go Ottawa</router-link
 			>
 			<router-link

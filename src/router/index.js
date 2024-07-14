@@ -4,6 +4,7 @@ import ProjectListView from '@/views/ProjectListView.vue'
 import ReactContactBook from '@/pages/projects/react_contact_book.vue'
 import Password_Generator from '@/pages/projects/Password_Generator.vue'
 import Pomodoro_Timer from '@/pages/projects/Pomodoro_Timer.vue'
+import GottagoOttawa from '@/pages/projects/GottagoOttawa.vue'
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,12 @@ const router = createRouter({
 			name: 'Pomodoro Timer',
 			component: Pomodoro_Timer,
 		},
+		{
+			path: '/gotta_go_ottawa',
+			name: 'Gotta Go Ottawa',
+			component: GottagoOttawa,
+		},
+
 		{
 			path: '/:pathMatch(.*)*',
 			redirect: { name: 'home' },
