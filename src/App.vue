@@ -5,9 +5,11 @@ import footerComp from './components/FooterComp.vue'
 </script>
 
 <template>
-  <HeaderComp />
-  <RouterView class="inner-wrapper" />
-  <footerComp />
+	<div class="">
+		<HeaderComp />
+		<RouterView class="inner-wrapper min-h-[200vh]" />
+		<footerComp class="mb-auto" />
+	</div>
 </template>
 
 <style scoped></style>
