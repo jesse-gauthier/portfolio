@@ -5,7 +5,7 @@ import footerComp from './components/FooterComp.vue'
 </script>
 
 <template>
-	<div class="">
+	<div class="flex flex-col gap-4">
 		<HeaderComp />
 		<RouterView class="inner-wrapper min-h-[200vh]" />
 		<footerComp class="mb-auto" />

@@ -1,7 +1,13 @@
 <template>
 	<!-- Project Section -->
-	<section id="projects" class="mt-10" aria-labelledby="projects_heading">
-		<h2 id="projects_heading" class="text-2xl font-bold mb-4">My Projects</h2>
+	<section
+		data-aos="fade-up"
+		data-aos-duration="3000"
+		id="projects"
+		class="mt-10"
+		aria-labelledby="projects_heading"
+	>
+		<h2 id="projects_heading" class="text-3xl font-bold mb-4">My Projects</h2>
 		<ProjectsListGallery
 			title="Web Development Projects"
 			titleTwo="Web Application Projects"
@@ -11,4 +17,12 @@
 
 <script setup>
 import ProjectsListGallery from '../components/ProjectsListGallery.vue'
+import { onMounted } from 'vue'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+onMounted(() => {
+	AOS.init({})
+})
 </script>
