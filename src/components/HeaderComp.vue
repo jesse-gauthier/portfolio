@@ -1,15 +1,18 @@
 <template>
-	<header class="inner-wrapper py-6" role="banner">
-		<nav class="flex justify-between items-center flex-wrap" role="navigation">
+	<header class="py-6 blue-bg" role="banner">
+		<nav
+			class="inner-wrapper flex justify-between items-center flex-wrap"
+			role="navigation"
+		>
 			<router-link to="/">
 				<div id="brand" class="cursor-pointer">
 					<h1
-						class="orange-text align-middle text-center text-4xl font-bold heading-text hover-blue-text"
+						class="orange-text align-middle text-center text-4xl font-bold heading-text"
 					>
 						Jesse Gauthier
 					</h1>
 					<h2
-						class="blue-text align-middle text-center text-xl font-bold sub-heading-text hover-orange"
+						class="align-middle text-center text-xl font-bold sub-heading-text hover-orange"
 					>
 						Front End Developer
 					</h2>
@@ -80,7 +83,7 @@
 			<!-- Full-Screen Mobile Menu (Hidden by Default) -->
 			<div
 				v-if="isMenuOpen"
-				class="fixed inset-0 z-10 bg-white md:hidden flex flex-col items-center justify-center"
+				class="fixed inset-0 z-10 blue-bg md:hidden flex flex-col items-center justify-center"
 			>
 				<button
 					aria-label="Close menu"
@@ -97,25 +100,40 @@
 				</button>
 				<ul class="text-center">
 					<li class="block p-4 text-lg font-medium hover-orange">
-						<router-link to="/" @click="toggleMenu">Home</router-link>
+						<router-link
+							class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
+							to="/"
+							@click="toggleMenu"
+							>Home</router-link
+						>
 					</li>
 					<li class="block p-4 text-lg font-medium hover-orange">
-						<router-link to="/projects" @click="toggleMenu"
+						<router-link
+							class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
+							to="/projects"
+							@click="toggleMenu"
 							>Projects</router-link
 						>
 					</li>
 					<li class="block p-4 text-lg font-medium hover-orange">
-						<a href="https://github.com/jesseagauthier" @click="toggleMenu"
+						<a
+							class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
+							href="https://github.com/jesseagauthier"
+							@click="toggleMenu"
 							>GitHub</a
 						>
 					</li>
 					<li class="block p-4 text-lg font-medium hover-orange">
-						<a href="https://codepen.io/jessegauthier1994" @click="toggleMenu"
+						<a
+							class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
+							href="https://codepen.io/jessegauthier1994"
+							@click="toggleMenu"
 							>CodePen</a
 						>
 					</li>
 					<li class="block p-4 text-lg font-medium hover-orange">
 						<a
+							class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
 							href="https://www.linkedin.com/in/jesse-gauthier-475a25168/"
 							@click="toggleMenu"
 							>LinkedIn</a

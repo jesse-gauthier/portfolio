@@ -14,7 +14,12 @@
 					class="w-full md:w-1/2 h-auto rounded-lg mb-4 md:mb-0"
 				/>
 			</div>
-
+			<a
+				class="mt-5 btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+				href="https://pomodorotimer.jessegauthier.dev/"
+				target="_blank"
+				>Live Version</a
+			>
 			<p class="text-base md:text-lg my-4">
 				Developed a productive Pomodoro Timer using pure JavaScript, featuring
 				an intuitive user interface that helps manage work and break intervals

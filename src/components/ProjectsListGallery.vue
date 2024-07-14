@@ -1,6 +1,10 @@
 <template>
 	<div>
-		<h2 class="text-2xl">{{ props.titleTwo }}</h2>
+		<p class="md:w-[60%] text-justify">
+			Welcome to My Portfolio! Below, you'll find a collection of the projects I
+			am most proud of. Each project showcases a variety of skills, ranging from
+			web design to development and everything in between.
+		</p>
 		<div
 			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-3 mt-2"
 		>
@@ -19,23 +23,30 @@
 				to="pomodoro_timer"
 				>Pomodoro Timer</router-link
 			>
-		</div>
-	</div>
-	<div>
-		<h2 class="text-2xl">{{ props.title }}</h2>
-		<!-- Gallery -->
-		<div
-			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-3 mt-2"
-		>
-			<a
-				class="self-start hover:scale-[1.02] shadow-md"
-				target="_blank"
-				v-for="project of WebProjects"
-				:key="project.id"
-				:href="project.link"
+			<router-link
+				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+				disabled
+				to="/"
+				>Gotta Go Ottawa</router-link
 			>
-				<img :src="project.image" :alt="project.name" />
-			</a>
+			<router-link
+				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+				to="/"
+				disabled
+				>UpMedia</router-link
+			>
+			<router-link
+				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+				to="/"
+				disabled
+				>The County Cooperage</router-link
+			>
+			<router-link
+				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+				to="/"
+				disabled
+				>Real Adulting 101</router-link
+			>
 		</div>
 	</div>
 </template>

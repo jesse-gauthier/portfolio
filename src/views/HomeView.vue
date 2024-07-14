@@ -11,22 +11,33 @@ import { education } from '../data/education.js'
 				class="grid grid-cols-1 lg:grid-cols-4 gap-4"
 				aria-labelledby="tldr_title"
 			>
-				<div class="p-8 lg:col-span-2">
+				<div class="p-8 lg:col-span-2 flex justify-center flex-col">
 					<img
-						class="md:max-w-[50%] mx-auto rounded-lg"
+						class="md:max-w-[70%] mx-auto rounded-lg"
 						src="/assets/profile.jpg"
 						alt=""
 					/>
 				</div>
-				<div id="intro" class="flex leading-relaxed lg:col-span-2 h-[100%]">
-					<p class="text-black md:w-[80%] text-justify text-xl self-center">
-						Dynamic and detail-oriented Web Developer with progressive
+				<div
+					id="intro"
+					class="flex flex-col leading-relaxed lg:col-span-2 h-[100%] gap-8 border-[#e89e1d] border-4 p-5"
+				>
+					<p class="text-black text-justify text-xl self-center">
+						<span class="font-semibold text-2xl mt-1 block"
+							>Hey, I'm Jesse.</span
+						>
+						<br />
+						I'm a dynamic and detail-oriented Web Developer with progressive
 						experience in designing, developing, and maintaining robust websites
-						and applications. Proficient in an array of programming languages
-						and frameworks, including JavaScript, Vue.js, React, and PHP for
-						WordPress. Known for delivering client-focused solutions, enhancing
-						user experiences, and driving business growth through innovative web
-						strategies. Adept at collaborating with cross-functional teams to
+						and applications. I'm proficient in a variety of programming
+						languages and frameworks, including JavaScript, Vue.js, React,
+						MySQL, and PHP.
+					</p>
+					<div class="w-[100%] h-[3px] bg-[#e89e1d] rounded-full"></div>
+					<p class="text-black text-justify text-xl self-center">
+						Known for delivering client-focused solutions, enhancing user
+						experiences, and driving business growth through innovative web
+						strategies. I excel at collaborating with cross-functional teams to
 						define project requirements, troubleshoot complex issues, and ensure
 						the successful deployment of high-performance, scalable web
 						solutions.
@@ -45,9 +56,9 @@ import { education } from '../data/education.js'
 						class="p-8 blue-bg text-center w-full md:basis-1/2 flex flex-col justify-center rounded-lg"
 					>
 						<p v-if="edu.honours" class="font-bold text-xl">
-							Graduated With Honours
+							Dean's List Recipient
 						</p>
-
+						<p v-else class="font-bold text-xl">Part Time</p>
 						<h3 class="text-medium text-xl m-0 self-center">
 							{{ edu.program }}
 						</h3>
@@ -58,7 +69,7 @@ import { education } from '../data/education.js'
 			</section>
 			<!-- Skills Section -->
 			<section id="skills" class="mt-10" aria-labelledby="skills_heading">
-				<h2 id="skills_heading" class="text-2xl font-bold mb-4">Skills</h2>
+				<h2 id="skills_heading" class="text-2xl font-bold mb-4">My Stack</h2>
 				<div class="p-6 blue-bg rounded-lg shadow-md">
 					<ul class="flex flex-wrap gap-4 justify-center text-lg text-gray-700">
 						<li
@@ -241,6 +252,7 @@ import { education } from '../data/education.js'
 								Senior Web Developer | Shopify Developer
 							</h3>
 							<p class="text-lg my-2 font-bold">The County Cooperage</p>
+							<p class="my-2">May 2023 - Present</p>
 							<p>
 								Develop and implement web applications using HTML, CSS,
 								JavaScript, jQuery, AJAX, and Shopify technologies to enhance
@@ -256,7 +268,7 @@ import { education } from '../data/education.js'
 							<div>
 								<hr class="my-4" />
 								<h4 class="my-3 text-xl font-medium">Key Accomplishments:</h4>
-								<ul class="list-disc">
+								<ul class="list-disc list-inside">
 									<li>
 										Integrated third-party libraries such as jQuery, React.js,
 										and Bootstrap to accelerate development time and enhance
@@ -294,6 +306,8 @@ import { education } from '../data/education.js'
 								Wordpress Developer | UI Researcher
 							</h3>
 							<p class="text-lg my-2 font-bold">GottaGo Ottawa</p>
+							<p class="my-2">Jan 2024 - Present</p>
+
 							<p>
 								Collaborated with a cross-functional team to define website
 								objectives, aligning with the overall business strategy,
@@ -309,7 +323,7 @@ import { education } from '../data/education.js'
 							<div>
 								<hr class="my-4" />
 								<h4 class="my-3 text-xl font-medium">Key Accomplishments:</h4>
-								<ul class="list-disc">
+								<ul class="list-disc list-inside">
 									<li>
 										Led the UX/UI design process, from concept to high-fidelity
 										prototypes, enhancing usability and accessibility, and
