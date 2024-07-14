@@ -1,5 +1,15 @@
 <script setup>
+import { onMounted } from 'vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { education } from '../data/education.js'
+
+onMounted(() => {
+	AOS.init({
+		// duration: 800, // animation duration
+		// once: true, // whether animation should happen only once - while scrolling down
+	})
+})
 </script>
 
 <template>
@@ -7,6 +17,8 @@ import { education } from '../data/education.js'
 		<div class="mt-12">
 			<!-- About Section -->
 			<section
+				data-aos="fade-up"
+				data-aos-duration="3000"
 				id="about"
 				class="grid grid-cols-1 lg:grid-cols-4 gap-4"
 				aria-labelledby="tldr_title"
@@ -45,7 +57,13 @@ import { education } from '../data/education.js'
 				</div>
 			</section>
 			<!-- Education Section -->
-			<section id="education" class="mt-10" aria-labelledby="education_heading">
+			<section
+				data-aos="fade-up"
+				data-aos-duration="3000"
+				id="education"
+				class="mt-10"
+				aria-labelledby="education_heading"
+			>
 				<h2 id="education_heading" class="text-2xl font-bold mb-4">
 					Education
 				</h2>
@@ -68,7 +86,13 @@ import { education } from '../data/education.js'
 				</div>
 			</section>
 			<!-- Skills Section -->
-			<section id="skills" class="mt-10" aria-labelledby="skills_heading">
+			<section
+				data-aos="fade-up"
+				data-aos-duration="3000"
+				id="skills"
+				class="mt-10"
+				aria-labelledby="skills_heading"
+			>
 				<h2 id="skills_heading" class="text-2xl font-bold mb-4">My Stack</h2>
 				<div class="p-6 blue-bg rounded-lg shadow-md">
 					<ul class="flex flex-wrap gap-4 justify-center text-lg text-gray-700">
@@ -235,9 +259,10 @@ import { education } from '../data/education.js'
 					</ul>
 				</div>
 			</section>
-
 			<!-- Experience Section -->
 			<section
+				data-aos="fade-up"
+				data-aos-duration="3000"
 				id="experience"
 				class="mt-10"
 				aria-labelledby="experience_heading"

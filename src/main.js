@@ -5,6 +5,7 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import 'aos/dist/aos.css'
 
 import { register } from 'swiper/element/bundle'
 // register Swiper custom elements
