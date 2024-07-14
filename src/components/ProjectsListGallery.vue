@@ -4,8 +4,21 @@
 		<div
 			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-3 mt-2"
 		>
-			<router-link to="react_contact_book">React Contact Book</router-link>
-			<router-link to="password_generator">Password Generator</router-link>
+			<router-link
+				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+				to="react_contact_book"
+				>React Contact Book</router-link
+			>
+			<router-link
+				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+				to="password_generator"
+				>Password Generator</router-link
+			>
+			<router-link
+				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+				to="pomodoro_timer"
+				>Pomodoro Timer</router-link
+			>
 		</div>
 	</div>
 	<div>
@@ -53,15 +66,6 @@ const props = defineProps(['title', 'titleTwo'])
 // 		github: 'https://github.com/jesseagauthier/firebase-recipe-saver',
 // 	},
 // 	{
-// 		id: 3,
-// 		name: 'dr. seuss book api - Vanilla JS',
-// 		subtitle:
-// 			'a book application that displays Dr. Seuss books from an RESTApi',
-// 		image: './assets/misc/seuss.jpg',
-// 		link: 'https://seusstreasury.jessegauthier.dev/',
-// 		github: 'https://github.com/jesseagauthier/Seuss-Treasury',
-// 	},
-// 	{
 // 		id: 4,
 // 		name: 'password generator - Vanilla JS',
 // 		subtitle:
@@ -76,15 +80,7 @@ const props = defineProps(['title', 'titleTwo'])
 // 			'a application that fetches pre-written reviews from a custom CMS',
 // 		link: 'https://gamereview.jessegauthier.dev/',
 // 		github: 'https://github.com/jesseagauthier/mtm6407-review-site-frontend',
-// 	},
-// 	{
-// 		id: 5,
-// 		name: 'Pomodoro Timer',
-// 		subtitle:
-// 			'a application that fetches pre-written reviews from a custom CMS',
-// 		link: 'https://pomodorotimer.jessegauthier.dev/ ',
-// 		github: '',
-// 	},
+// 	}
 // ])
 
 const WebProjects = ref([
