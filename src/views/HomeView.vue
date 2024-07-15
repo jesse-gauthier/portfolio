@@ -6,8 +6,7 @@ import { education } from '../data/education.js'
 
 onMounted(() => {
 	AOS.init({
-		// duration: 800, // animation duration
-		// once: true, // whether animation should happen only once - while scrolling down
+		duration: 3000,
 	})
 })
 </script>
@@ -18,7 +17,6 @@ onMounted(() => {
 			<!-- About Section -->
 			<section
 				data-aos="fade-up"
-				data-aos-duration="3000"
 				id="about"
 				class="grid grid-cols-1 lg:grid-cols-4 gap-4"
 				aria-labelledby="tldr_title"
@@ -59,7 +57,6 @@ onMounted(() => {
 			<!-- Education Section -->
 			<section
 				data-aos="fade-up"
-				data-aos-duration="3000"
 				id="education"
 				class="mt-10"
 				aria-labelledby="education_heading"
@@ -70,7 +67,6 @@ onMounted(() => {
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 					<article
 						data-aos="fade-up"
-						data-aos-duration="3000"
 						v-for="edu in education"
 						:key="edu.program"
 						class="p-8 blue-bg text-center w-full md:basis-1/2 flex flex-col justify-center rounded-lg"
@@ -79,11 +75,7 @@ onMounted(() => {
 							Dean's List Recipient
 						</p>
 						<p v-else class="font-bold text-xl">Part Time</p>
-						<h3
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="text-medium text-xl m-0 self-center"
-						>
+						<h3 data-aos="fade-up" class="text-medium text-xl m-0 self-center">
 							{{ edu.program }}
 						</h3>
 						<p>{{ edu.institution }}</p>
@@ -94,7 +86,6 @@ onMounted(() => {
 			<!-- Skills Section -->
 			<section
 				data-aos="fade-up"
-				data-aos-duration="3000"
 				id="skills"
 				class="mt-10"
 				aria-labelledby="skills_heading"
@@ -332,7 +323,6 @@ onMounted(() => {
 			<!-- Experience Section -->
 			<section
 				data-aos="fade-up"
-				data-aos-duration="3000"
 				id="experience"
 				class="mt-10"
 				aria-labelledby="experience_heading"

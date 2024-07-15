@@ -1,7 +1,6 @@
 <template>
 	<div
 		data-aos="fade-up"
-		data-aos-duration="3000"
 		class="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 p-4 md:p-8 rounded-xl"
 	>
 		<div class="flex justify-between">
@@ -20,14 +19,12 @@
 			<div class="flex flex-wrap flex-row-reverse justify-evenly">
 				<h2
 					data-aos="fade-up"
-					data-aos-duration="3000"
 					class="text-3xl md:text-5xl font-bold mb-4 text-center self-center"
 				>
 					Gotta Go Ottawa
 				</h2>
 				<img
 					data-aos="fade-up"
-					data-aos-duration="3000"
 					src="/src\assets\projects\gotta_go\logo.svg"
 					alt="Screenshot of the React Contact Book application"
 					class="w-[80%] md:w-1/2 lg:w-1/6 h-auto rounded-lg mb-4 md:mb-0"
@@ -68,6 +65,8 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 onMounted(() => {
-	AOS.init({})
+	AOS.init({
+		duration: 3000,
+	})
 })
 </script>

@@ -1,7 +1,6 @@
 <template>
 	<div
 		data-aos="fade-up"
-		data-aos-duration="3000"
 		class="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 p-4 md:p-8"
 	>
 		<div class="flex justify-between">
@@ -65,6 +64,8 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 onMounted(() => {
-	AOS.init({})
+	AOS.init({
+		duration: 3000,
+	})
 })
 </script>
