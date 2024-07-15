@@ -2,7 +2,7 @@
 	<footer
 		id="contact"
 		aria-labelledby="contact-heading"
-		class="mt-10 mb-auto bg-[#2b3d4f]"
+		class="mt-10 bg-[#2b3d4f]"
 	>
 		<div
 			class="flex flex-col justify-center py-14 text-center text-white"

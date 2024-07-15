@@ -5,10 +5,10 @@ import footerComp from './components/FooterComp.vue'
 </script>
 
 <template>
-	<div class="flex flex-col gap-4">
+	<div class="flex flex-col gap-4 min-h-screen">
 		<HeaderComp />
-		<RouterView class="inner-wrapper min-h-[200vh]" />
-		<footerComp class="mb-auto" />
+		<RouterView class="inner-wrapper" />
+		<footerComp class="mt-auto" />
 	</div>
 </template>
 

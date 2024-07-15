@@ -1,7 +1,5 @@
 <template>
-	<div
-		class="min-w-[50vw] mx-auto min-h-screen p-8 bg-white shadow-lg rounded-lg"
-	>
+	<div class="mx-auto p-8 bg-white shadow-lg rounded-lg">
 		<h2 class="text-3xl mb-4 capitalize">I would love to hear from you</h2>
 		<form @submit.prevent="submitForm" class="space-y-6" data-aos="fade-up">
 			<div>
