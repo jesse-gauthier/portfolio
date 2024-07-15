@@ -37,28 +37,20 @@
 				>Gotta Go Ottawa</router-link
 			>
 			<router-link
-				data-aos="fade-up"
-				data-aos-duration="3000"
 				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
-				to="/"
-				disabled
-				>UpMedia</router-link
-			>
-			<router-link
-				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
-				to="/"
-				disabled
+				to="/the_county_cooperage"
 				data-aos="fade-up"
 				data-aos-duration="3000"
 				>The County Cooperage</router-link
 			>
-			<router-link
+			<a
 				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
-				to="/"
-				disabled
+				href="https://github.com/jesse-gauthier"
 				data-aos="fade-up"
 				data-aos-duration="3000"
-				>Real Adulting 101</router-link
+				referrerpolicy=""
+				target="_blank"
+				>Check Github For Active Projects</a
 			>
 		</div>
 	</div>
