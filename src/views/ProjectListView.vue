@@ -25,4 +25,17 @@ import 'aos/dist/aos.css'
 onMounted(() => {
 	AOS.init({})
 })
+
+import { useHead } from '@unhead/vue'
+
+useHead({
+	title: 'Projects - Jesse Gauthier - Web Developer',
+	meta: [
+		{
+			name: 'Jesse Gauthier - Web Developer',
+			content:
+				'Jesse Gauthier - Front End Web Developer - Ottawa Ontario Canada',
+		},
+	],
+})
 </script>

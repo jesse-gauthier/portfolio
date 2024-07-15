@@ -1,5 +1,7 @@
 <script setup>
 import { onMounted } from 'vue'
+import { useHead } from '@unhead/vue'
+
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { education } from '../data/education.js'
@@ -8,6 +10,17 @@ onMounted(() => {
 	AOS.init({
 		duration: 3000,
 	})
+})
+
+useHead({
+	title: 'Jesse Gauthier - Web Developer',
+	meta: [
+		{
+			name: 'Jesse Gauthier - Web Developer',
+			content:
+				'Jesse Gauthier - Front End Web Developer - Ottawa Ontario Canada',
+		},
+	],
 })
 </script>
 

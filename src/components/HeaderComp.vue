@@ -52,6 +52,13 @@
 					>
 				</li>
 				<li class="mx-2 p-2 h-fit">
+					<router-link
+						to="/contact"
+						class="sub-heading-text text-lg font-medium hover-orange"
+						>Contact</router-link
+					>
+				</li>
+				<li class="mx-2 p-2 h-fit">
 					<a
 						href="https://github.com/jesse-gauthier"
 						target="_blank"
@@ -115,6 +122,15 @@
 							>Projects</router-link
 						>
 					</li>
+					<li class="block p-4 text-lg font-medium hover-orange">
+						<router-link
+							class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
+							to="/contact"
+							@click="toggleMenu"
+							>Contact</router-link
+						>
+					</li>
+
 					<li class="block p-4 text-lg font-medium hover-orange">
 						<a
 							class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"

@@ -11,10 +11,14 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@unhead/vue": "^1.9.16",
     "aos": "^2.3.4",
     "pinia": "^2.1.7",
     "swiper": "^11.1.0",
+    "unhead": "^1.9.16",
     "vue": "^3.4.21",
+    "vue-gtag": "^2.0.1",
+    "vue-gtag-next": "^1.14.0",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {

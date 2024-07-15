@@ -6,6 +6,8 @@ import Password_Generator from '@/pages/projects/Password_Generator.vue'
 import Pomodoro_Timer from '@/pages/projects/Pomodoro_Timer.vue'
 import GottagoOttawa from '@/pages/projects/GottagoOttawa.vue'
 import TheCountyCoperage from '@/pages/projects/TheCountyCooperage.vue'
+import ContactForm from '@/pages/ContactForm.vue'
+
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
 	routes: [
@@ -43,6 +45,11 @@ const router = createRouter({
 			path: '/the_county_cooperage',
 			name: 'The County Cooperage',
 			component: TheCountyCoperage,
+		},
+		{
+			path: '/contact',
+			name: 'Contact Jesse',
+			component: ContactForm,
 		},
 
 		{
