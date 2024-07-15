@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
+import ContactForm from '@/pages/ContactForm.vue'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -34,12 +35,18 @@ useHead({
 				class="grid grid-cols-1 lg:grid-cols-4 gap-4"
 				aria-labelledby="tldr_title"
 			>
-				<div class="p-8 lg:col-span-2 flex justify-center flex-col">
+				<div class="p-8 lg:col-span-2 flex justify-center flex-col gap-3">
 					<img
 						class="md:max-w-[70%] mx-auto rounded-lg"
 						src="/assets/profile.jpg"
 						alt=""
 					/>
+					<router-link
+						to="/contact"
+						class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-fit mx-auto"
+					>
+						Work with me
+					</router-link>
 				</div>
 				<div
 					id="intro"
@@ -105,234 +112,248 @@ useHead({
 			>
 				<h2 id="skills_heading" class="text-2xl font-bold mb-4">My Stack</h2>
 				<div class="p-6 blue-bg rounded-lg shadow-md">
-					<ul class="flex flex-wrap gap-4 justify-center text-lg text-gray-700">
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							JavaScript
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Node.js
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Node Express
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Vue.js
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							React.js
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							PHP
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							SASS
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							CSS
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							WordPress
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Shopify
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							MySQL
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							MongoDB
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Rest API
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Tailwind CSS
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Git
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Bootstrap
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Docker
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Webpack
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Google Cloud
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Express.js
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Nuxt.js
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Plesk
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							cPanel
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							HTML
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							OOP
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							GitHub
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Strapi
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							WCAG
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							NPM
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Gulp
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Responsive Design
-						</li>
-						<li
-							data-aos="fade-up"
-							data-aos-duration="3000"
-							class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-						>
-							Agile Methodologies
-						</li>
-					</ul>
+					<div>
+						<h3 class="text-xl font-bold mb-2">Programming Languages</h3>
+						<ul class="flex flex-wrap gap-4 text-lg text-gray-700">
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								JavaScript
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								PHP
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								HTML
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								CSS
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold mb-2">Frameworks and Libraries</h3>
+						<ul class="flex flex-wrap gap-4 text-lg text-gray-700">
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Node.js
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Node Express
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Vue.js
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								React.js
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								SASS
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Tailwind CSS
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Bootstrap
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Express.js
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Nuxt.js
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold mb-2">Tools and Technologies</h3>
+						<ul class="flex flex-wrap gap-4 text-lg text-gray-700">
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								WordPress
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Shopify
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								MySQL
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								MongoDB
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Rest API
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Git
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Docker
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Webpack
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Google Cloud
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Plesk
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								cPanel
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								OOP
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								GitHub
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Strapi
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								WCAG
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								NPM
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Gulp
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Responsive Design
+							</li>
+							<li
+								data-aos="fade-up"
+								data-aos-duration="3000"
+								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
+							>
+								Agile Methodologies
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
+
 			<!-- Experience Section -->
 			<section
 				data-aos="fade-up"
@@ -476,6 +497,7 @@ useHead({
 					</article>
 				</div>
 			</section>
+			<ContactForm data-aos="fade-up" class="w-[fit-content]" />
 		</div>
 	</main>
 </template>
