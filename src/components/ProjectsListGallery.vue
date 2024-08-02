@@ -19,6 +19,13 @@
 				data-aos="fade-up"
 				data-aos-duration="3000"
 				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+				to="/pokemon_catcher"
+				>Pokemon Catcher</router-link
+			>
+			<router-link
+				data-aos="fade-up"
+				data-aos-duration="3000"
+				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
 				to="password_generator"
 				>Password Generator</router-link
 			>

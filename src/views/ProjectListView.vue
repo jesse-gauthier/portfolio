@@ -2,7 +2,7 @@
 	<!-- Project Section -->
 	<section
 		data-aos="fade-up"
-		data-aos-duration="3000"
+		data-aos-duration="1000"
 		id="projects"
 		class="mt-10"
 		aria-labelledby="projects_heading"

@@ -9,7 +9,7 @@ import { education } from '../data/education.js'
 
 onMounted(() => {
 	AOS.init({
-		duration: 3000,
+		duration: 2000,
 	})
 })
 

@@ -7,6 +7,7 @@ import Pomodoro_Timer from '@/pages/projects/Pomodoro_Timer.vue'
 import GottagoOttawa from '@/pages/projects/GottagoOttawa.vue'
 import TheCountyCoperage from '@/pages/projects/TheCountyCooperage.vue'
 import ContactForm from '@/pages/ContactForm.vue'
+import PokemonCatcher from '@/pages/projects/PokemonCatcher.vue'
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +31,12 @@ const router = createRouter({
 			path: '/password_generator',
 			name: 'Password Generator',
 			component: Password_Generator,
+		},
+
+		{
+			path: '/pokemon_catcher',
+			name: 'Pokemon Catcher',
+			component: PokemonCatcher,
 		},
 		{
 			path: '/pomodoro_timer',
