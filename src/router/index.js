@@ -10,6 +10,7 @@ import ContactForm from '@/pages/ContactForm.vue'
 import PokemonCatcher from '@/pages/projects/PokemonCatcher.vue'
 
 const router = createRouter({
+	linkActiveClass: 'bg-white btn text-black',
 	history: createWebHistory(import.meta.env.BASE_URL),
 	routes: [
 		{

@@ -11,6 +11,7 @@
 				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
 				href="https://thecountycooperage.ca/"
 				target="_blank"
+				@click="fireGAEvent"
 				>Live Version</a
 			>
 		</div>
@@ -24,8 +25,8 @@
 					The County Cooperage
 				</h2>
 				<img
-					src="/src\assets\projects\county_cooperage\thecountycooperage.png"
-					alt="Screenshot of the React Contact Book application"
+					src="/src/assets/projects/county_cooperage/thecountycooperage.png"
+					alt="Screenshot of The County Cooperage website"
 					class="w-[80%] md:w-1/2 lg:w-1/6 h-auto rounded-lg mb-4 md:mb-0"
 				/>
 			</div>
@@ -56,8 +57,8 @@
 					</ul>
 					<img
 						class="md:max-w-[400px] bg-white p-3 rounded-xl"
-						src="/src\assets\projects\county_cooperage\thecountycooperage2.png"
-						alt=""
+						src="/src/assets/projects/county_cooperage/thecountycooperage2.png"
+						alt="Additional screenshot of The County Cooperage website"
 					/>
 				</div>
 			</div>
@@ -68,11 +69,32 @@
 <script setup>
 import { onMounted } from 'vue'
 import AOS from 'aos'
+import { useHead } from '@unhead/vue'
 import 'aos/dist/aos.css'
 
+// Initialize AOS
 onMounted(() => {
 	AOS.init({
 		duration: 3000,
 	})
 })
+
+// Set the page title
+const { title } = useHead({
+	title: 'The County Cooperage - Project Details',
+})
+
+// Fire Google Analytics event
+function fireGAEvent() {
+	if (window.ga) {
+		window.ga('send', 'event', 'Link', 'click', `${title.value} link pressed`)
+	} else if (window.gtag) {
+		window.gtag('event', 'click', {
+			event_category: 'Link',
+			event_label: `${title.value} link pressed`,
+		})
+	} else {
+		console.warn('Google Analytics not initialized')
+	}
+}
 </script>

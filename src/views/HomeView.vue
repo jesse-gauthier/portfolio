@@ -8,8 +8,13 @@ import 'aos/dist/aos.css'
 import { education } from '../data/education.js'
 
 onMounted(() => {
-	AOS.init({
-		duration: 2000,
+	// Wait for the document to fully load before initializing AOS
+	window.addEventListener('load', () => {
+		AOS.init({
+			duration: 1200, // Reduced the duration for a snappier experience
+			once: true, // Ensures animations run only once when the element comes into view
+			offset: 50, // Adjust offset to trigger animations earlier or later
+		})
 	})
 })
 
@@ -17,7 +22,7 @@ useHead({
 	title: 'Jesse Gauthier - Web Developer',
 	meta: [
 		{
-			name: 'Jesse Gauthier - Web Developer',
+			name: 'description',
 			content:
 				'Jesse Gauthier - Front End Web Developer - Ottawa Ontario Canada',
 		},
@@ -39,7 +44,8 @@ useHead({
 					<img
 						class="md:max-w-[70%] mx-auto rounded-lg"
 						src="/assets/profile.jpg"
-						alt=""
+						alt="Profile picture of Jesse Gauthier"
+						loading="lazy"
 					/>
 					<router-link
 						to="/contact"
@@ -74,6 +80,7 @@ useHead({
 					</p>
 				</div>
 			</section>
+
 			<!-- Education Section -->
 			<section
 				data-aos="fade-up"
@@ -103,6 +110,7 @@ useHead({
 					</article>
 				</div>
 			</section>
+
 			<!-- Skills Section -->
 			<section
 				data-aos="fade-up"
@@ -117,234 +125,229 @@ useHead({
 						<ul class="flex flex-wrap gap-4 text-lg text-gray-700">
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								JavaScript
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								PHP
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								HTML
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								CSS
 							</li>
 						</ul>
 					</div>
+					<!-- Frameworks and Libraries -->
 					<div>
 						<h3 class="text-xl font-bold mb-2">Frameworks and Libraries</h3>
 						<ul class="flex flex-wrap gap-4 text-lg text-gray-700">
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Node.js
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
-								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-							>
-								Node Express
-							</li>
-							<li
-								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Vue.js
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								React.js
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								SASS
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Tailwind CSS
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Bootstrap
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Express.js
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Nuxt.js
 							</li>
 						</ul>
 					</div>
+					<!-- Tools and Technologies -->
 					<div>
 						<h3 class="text-xl font-bold mb-2">Tools and Technologies</h3>
 						<ul class="flex flex-wrap gap-4 text-lg text-gray-700">
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								WordPress
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Shopify
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								MySQL
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								MongoDB
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Rest API
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Git
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Docker
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Webpack
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Google Cloud
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Plesk
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								cPanel
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								OOP
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								GitHub
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Strapi
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								WCAG
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								NPM
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Gulp
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Responsive Design
 							</li>
 							<li
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 								class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
 							>
 								Agile Methodologies
@@ -367,14 +370,14 @@ useHead({
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 					<article
 						data-aos="fade-up"
-						data-aos-duration="3000"
+						data-aos-duration="1500"
 						class="mb-6 flex"
 					>
 						<div class="p-8 blue-bg rounded-lg">
 							<h3
 								class="text-2xl font-bold"
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 							>
 								Senior Web Developer | Shopify Developer
 							</h3>
@@ -391,6 +394,14 @@ useHead({
 								industry standards. Monitor page speed performance metrics
 								through Google Analytics and Page Speed Insights, leading to
 								optimized load times and better user retention.
+							</p>
+							<p>
+								In addition to development, manage SEO strategies to improve
+								site rankings on search engines, optimize content for keyword
+								targeting, and enhance site structure for better crawlability.
+								Run and monitor Google Ads campaigns to drive targeted traffic,
+								and develop social media posts to boost brand awareness and
+								audience engagement.
 							</p>
 							<div>
 								<hr class="my-4" />
@@ -409,7 +420,7 @@ useHead({
 									<li>
 										Troubleshot coding errors utilizing browser debugging tools
 										such as Firebug or Chrome DevTools, reducing issue
-										resolution time and improving site performance
+										resolution time and improving site performance.
 									</li>
 									<li>
 										Developed RESTful APIs that interacted with remote services,
@@ -417,11 +428,21 @@ useHead({
 										party authentication systems, expanding service offerings.
 									</li>
 									<li>
-										Designed And Development range of reuseable UI componenets
+										Designed and developed a range of reusable UI components.
 									</li>
 									<li>
-										Monitored Websites against user expereince metrics.
-										Implemented Changes based on findings.
+										Monitored websites against user experience metrics and
+										implemented changes based on findings, improving user
+										retention and overall performance.
+									</li>
+									<li>
+										Optimized website SEO and implemented Google Ads campaigns,
+										driving an increase in site traffic and conversions.
+									</li>
+									<li>
+										Created and managed social media posts to improve brand
+										visibility and audience engagement, contributing to business
+										growth.
 									</li>
 								</ul>
 							</div>
@@ -429,14 +450,14 @@ useHead({
 					</article>
 					<article
 						data-aos="fade-up"
-						data-aos-duration="3000"
+						data-aos-duration="1500"
 						class="mb-6 flex"
 					>
 						<div class="p-8 blue-bg rounded-lg">
 							<h3
 								class="text-2xl font-bold"
 								data-aos="fade-up"
-								data-aos-duration="3000"
+								data-aos-duration="1500"
 							>
 								Wordpress Developer | UI Researcher
 							</h3>

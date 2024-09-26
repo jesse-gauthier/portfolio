@@ -11,6 +11,7 @@
 				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
 				href="https://thewebmasters.online/"
 				target="_blank"
+				@click="fireGAEvent"
 				>Live Version</a
 			>
 		</div>
@@ -60,7 +61,7 @@
 
 <script setup>
 import { onMounted } from 'vue'
-
+import { useHead } from '@unhead/vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -69,4 +70,21 @@ onMounted(() => {
 		duration: 3000,
 	})
 })
+
+useHead({
+	title: 'Gotta Go Ottawa - Project Details',
+})
+
+function fireGAEvent() {
+	if (window.ga) {
+		window.ga('send', 'event', 'Link', 'click', 'live link pressed_Gottago')
+	} else if (window.gtag) {
+		window.gtag('event', 'click', {
+			event_category: 'Link',
+			event_label: 'live link pressed_Gottago',
+		})
+	} else {
+		console.warn('Google Analytics not initialized')
+	}
+}
 </script>

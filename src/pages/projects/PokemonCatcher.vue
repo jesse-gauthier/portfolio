@@ -11,6 +11,7 @@
 				class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
 				href="https://pokemon.jessegauthier.dev/"
 				target="_blank"
+				@click="fireGAEvent"
 				>Live Version</a
 			>
 		</div>
@@ -59,13 +60,33 @@
 
 <script setup>
 import { onMounted } from 'vue'
-
+import { useHead } from '@unhead/vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+// Initialize AOS
 onMounted(() => {
 	AOS.init({
 		duration: 3000,
 	})
 })
+
+// Set the page title
+const { title } = useHead({
+	title: 'Pokemon Catcher - Project Details',
+})
+
+// Fire Google Analytics event
+function fireGAEvent() {
+	if (window.ga) {
+		window.ga('send', 'event', 'Link', 'click', `${title.value} link pressed`)
+	} else if (window.gtag) {
+		window.gtag('event', 'click', {
+			event_category: 'Link',
+			event_label: `${title.value} link pressed`,
+		})
+	} else {
+		console.warn('Google Analytics not initialized')
+	}
+}
 </script>
