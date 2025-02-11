@@ -5,7 +5,7 @@ export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      // 
+      
       colors: {
         primary: "#e89e1d", // orange
         secondary: "#2b3d4f", // bluewood

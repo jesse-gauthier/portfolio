@@ -11,54 +11,54 @@
       <router-link
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+        class="btn btn-secondary"
         to="react_contact_book"
         >React Contact Book</router-link
       >
       <router-link
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+        class="btn btn-secondary"
         to="/pokemon_catcher"
         >Pokemon Catcher</router-link
       >
       <router-link
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+        class="btn btn-secondary"
         to="password_generator"
         >Password Generator</router-link
       >
       <router-link
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+        class="btn btn-secondary"
         to="pomodoro_timer"
         >Pomodoro Timer</router-link
       >
       <router-link
         data-aos="fade-up"
         data-aos-duration="3000"
-        class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+        class="btn btn-secondary"
         to="/gotta_go_ottawa"
         >Gotta Go Ottawa</router-link
       >
       <router-link
-        class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+        class="btn btn-secondary"
         to="/the_county_cooperage"
         data-aos="fade-up"
         data-aos-duration="3000"
         >The County Cooperage</router-link
       >
       <router-link
-        class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+        class="btn btn-secondary"
         to="/the_county_cooperage"
         data-aos="fade-up"
         data-aos-duration="3000"
         >Luma CRM</router-link
       >
       <a
-        class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]"
+        class="btn btn-secondary"
         href="https://github.com/jessegauthierhumber"
         data-aos="fade-up"
         data-aos-duration="3000"

@@ -139,7 +139,7 @@ h3 {
 }
 
 .btn {
-	@apply px-4 py-2 rounded-btn font-btn inline-block text-center cursor-pointer;
+	@apply px-4 py-2 rounded-btn font-btn text-center cursor-pointer;
 }
 
 .btn-primary {

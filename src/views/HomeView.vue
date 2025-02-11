@@ -8,7 +8,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { education } from "../data/education.js";
 
-const programmingLanguages = ["JavaScript", "PHP", "HTML", "CSS"];
+const programmingLanguages = [
+  "JavaScript",
+  "PHP",
+  "HTML",
+  "CSS",
+  "Python",
+  "TypeScript",
+];
 const frameworksAndLibraries = [
   "Node.js",
   "Vue.js",
@@ -20,6 +27,8 @@ const frameworksAndLibraries = [
   "Nuxt.js",
   "AppWrite",
   "SupaBase",
+  "Angular",
+  "Django",
 ];
 const toolsAndTechnologies = [
   "WordPress",
@@ -41,6 +50,8 @@ const toolsAndTechnologies = [
   "Gulp",
   "Responsive Design",
   "Agile Methodologies",
+  "Jenkins",
+  "Kubernetes",
 ];
 
 const experiences = [
@@ -49,13 +60,7 @@ const experiences = [
     company: "The County Cooperage",
     period: "May 2023 - Present",
     description: `
-      Develop and implement web applications using HTML, CSS, JavaScript, jQuery, AJAX, and Shopify technologies to enhance user engagement and functionality. 
-      Debug cross-browser compatibility issues in IE, Chrome, Firefox, and Safari, ensuring a seamless user experience across major browsers. 
-      Research emerging technologies to identify new trends in web development, keeping projects up to date with the latest industry standards. 
-      Monitor page speed performance metrics through Google Analytics and Page Speed Insights, leading to optimized load times and better user retention.
-      In addition to development, manage SEO strategies to improve site rankings on search engines, optimize content for keyword targeting, and enhance site structure for better crawlability. 
-      Run and monitor Google Ads campaigns to drive targeted traffic, and develop social media posts to boost brand awareness and audience engagement.
-    `,
+     Develop and implement web applications using HTML, CSS, JavaScript, jQuery, AJAX, and Shopify technologies to enhance user engagement and functionality. Debug cross-browser compatibility issues in IE, Chrome, Firefox, and Safari, ensuring a seamless user experience across major browsers. Research emerging technologies to identify new trends in web development, keeping projects up to date with the latest industry standards. Monitor page speed performance metrics through Google Analytics and Page Speed Insights, leading to optimized load times and better user retention. In addition to development, manage SEO strategies to improve site rankings on search engines, optimize content for keyword targeting, and enhance site structure for better crawlability.`,
     accomplishments: [
       "Integrated third-party libraries such as jQuery, React.js, and Bootstrap to accelerate development time and enhance site features.",
       "Maintained websites to ensure content accuracy, accessibility, and security compliance standards, resulting in improved user trust and site integrity.",
@@ -168,13 +173,6 @@ useHead({
             alt="Profile picture of Jesse Gauthier"
             loading="lazy"
           />
-          <router-link
-            to="/contact"
-            class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-fit mx-auto"
-            aria-label="Work with me"
-          >
-            Work with me
-          </router-link>
         </div>
         <div
           id="intro"
@@ -185,9 +183,9 @@ useHead({
               >Hey, I'm Jesse.</span
             >
             <br />
-            I'm a dynamic and detail-oriented Web Developer with progressive
+            I'm a dynamic and detail-oriented Web Developer with extensive
             experience in designing, developing, and maintaining robust websites
-            and applications. I'm proficient in a variety of programming
+            and applications. I am proficient in a wide range of programming
             languages and frameworks, including JavaScript, Vue.js, React,
             MySQL, and PHP.
           </p>
@@ -333,57 +331,6 @@ useHead({
           </article>
         </div>
       </section>
-
-      <!-- Testimonials Section -->
-      <section
-        data-aos="fade-up"
-        id="testimonials"
-        class="mt-10"
-        aria-labelledby="testimonials_heading"
-      >
-        <h2 id="testimonials_heading" class="text-2xl font-bold mb-4">
-          Testimonials
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-          <article
-            v-for="testimonial in testimonials"
-            :key="testimonial.name"
-            class="p-8 blue-bg rounded-lg"
-          >
-            <p class="text-lg font-semibold">{{ testimonial.name }}</p>
-            <p class="text-sm text-gray-600">{{ testimonial.position }}</p>
-            <p class="mt-4">{{ testimonial.feedback }}</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- Portfolio Section -->
-      <section
-        data-aos="fade-up"
-        id="portfolio"
-        class="mt-10"
-        aria-labelledby="portfolio_heading"
-      >
-        <h2 id="portfolio_heading" class="text-2xl font-bold mb-4">
-          Portfolio
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-          <article
-            v-for="project in projects"
-            :key="project.title"
-            class="p-8 blue-bg rounded-lg"
-          >
-            <img
-              :src="project.image"
-              :alt="project.title"
-              class="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 class="text-xl font-bold">{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
-          </article>
-        </div>
-      </section>
-
       <!-- Contact Form -->
       <ContactForm data-aos="fade-up" class="w-[fit-content]" />
     </div>
