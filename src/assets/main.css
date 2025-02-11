@@ -137,3 +137,89 @@ h3 {
 .group:hover .bg-gradient-to-br {
 	transform: rotate3d(0, 1, 0, 180deg);
 }
+
+.btn {
+	@apply px-4 py-2 rounded-btn font-btn inline-block text-center cursor-pointer;
+}
+
+.btn-primary {
+	@apply bg-primary text-black;
+}
+
+.btn-primary:hover {
+	@apply bg-orange-700;
+}
+
+.btn-secondary {
+	@apply bg-secondary text-white;
+}
+
+.btn-secondary:hover {
+	@apply bg-bluewood-700;
+}
+
+.btn-success {
+	@apply bg-success text-white;
+}
+
+.btn-success:hover {
+	@apply bg-green-700;
+}
+
+.btn-warning {
+	@apply bg-warning text-black;
+}
+
+.btn-warning:hover {
+	@apply bg-yellow-700;
+}
+
+.btn-info {
+	@apply bg-info text-black;
+}
+
+.btn-info:hover {
+	@apply bg-cyan-700;
+}
+
+.btn-neutral {
+	@apply bg-neutral text-white;
+}
+
+.btn-neutral:hover {
+	@apply bg-bluewood-700;
+}
+
+.input {
+	@apply px-4 py-2 border rounded-md;
+}
+
+.input-primary {
+	@apply border-primary text-primary;
+}
+
+.input-secondary {
+	@apply border-secondary text-secondary;
+}
+
+.input-success {
+	@apply border-success text-success;
+}
+
+.input-warning {
+	@apply border-warning text-warning;
+}
+
+.input-info {
+	@apply border-info text-info;
+}
+
+.input-neutral {
+	@apply border-neutral text-neutral;
+}
+
+@layer components {
+	.bg-bluewood-700 {
+		background-color: #1a2b3c; /* Replace with the desired color */
+	}
+}
