@@ -8,6 +8,7 @@ import GottagoOttawa from "@/pages/projects/GottagoOttawa.vue";
 import TheCountyCoperage from "@/pages/projects/TheCountyCooperage.vue";
 import ContactForm from "@/components/ContactForm.vue";
 import PokemonCatcher from "@/pages/projects/PokemonCatcher.vue";
+import LumaCrm from "@/pages/projects/LumaCrm.vue";
 
 const router = createRouter({
   linkActiveClass: "bg-white btn text-black",
@@ -59,7 +60,7 @@ const router = createRouter({
       name: "Contact Jesse",
       component: ContactForm,
     },
-
+    { path: "/LumaCrm", name: "LumaCrm", component: LumaCrm },
     {
       path: "/:pathMatch(.*)*",
       redirect: { name: "home" },
