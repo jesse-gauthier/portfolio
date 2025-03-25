@@ -1,30 +1,19 @@
 <template>
   <header class="py-6 blue-bg" role="banner">
-    <nav
-      class="inner-wrapper flex justify-between items-center flex-wrap"
-      role="navigation"
-    >
+    <nav class="inner-wrapper flex justify-between items-center flex-wrap" role="navigation">
       <router-link activeClass=" " to="/">
         <div id="brand" class="cursor-pointer">
-          <h1
-            class="orange-text align-middle text-center text-4xl font-bold heading-text"
-          >
+          <h1 class="orange-text align-middle text-center text-4xl font-bold heading-text">
             Jesse Gauthier
           </h1>
-          <h2
-            class="align-middle text-center text-xl font-bold sub-heading-text hover-orange"
-          >
+          <h2 class="align-middle text-center text-xl font-bold sub-heading-text hover-orange">
             Full Stack Developer
           </h2>
         </div>
       </router-link>
 
       <!-- Hamburger Menu Button (Visible on Mobile Only) -->
-      <button
-        aria-label="Open menu"
-        class="md:hidden block ml-auto"
-        @click="toggleMenu"
-      >
+      <button aria-label="Open menu" class="md:hidden block ml-auto" @click="toggleMenu">
         <svg viewBox="0 0 100 80" width="30" height="30">
           <rect width="100" height="20" fill="#e89e1d"></rect>
           <rect y="30" width="100" height="20" fill="#e89e1d"></rect>
@@ -33,127 +22,63 @@
       </button>
 
       <!-- Desktop Navigation (Always Visible) -->
-      <ul
-        id="navigation"
-        class="hidden md:flex capitalize items-center justify-center mt-3 md:mt-0"
-      >
+      <ul id="navigation" class="hidden md:flex capitalize items-center justify-center mt-3 md:mt-0">
         <li class="mx-2 h-fit">
-          <router-link
-            to="/"
-            class="sub-heading-text text-lg font-medium hover-orange p-2"
-            >Home</router-link
-          >
+          <router-link to="/" class="sub-heading-text text-lg font-medium hover-orange p-2">Home</router-link>
         </li>
         <li class="mx-2 h-fit">
-          <router-link
-            to="/projects"
-            class="sub-heading-text text-lg font-medium hover-orange p-2"
-            >Projects</router-link
-          >
+          <router-link to="/projects"
+            class="sub-heading-text text-lg font-medium hover-orange p-2">Projects</router-link>
         </li>
         <li class="mx-2 h-fit">
-          <router-link
-            to="/contact"
-            class="sub-heading-text text-lg font-medium hover-orange p-2"
-            >Contact</router-link
-          >
+          <router-link to="/contact" class="sub-heading-text text-lg font-medium hover-orange p-2">Contact</router-link>
         </li>
         <li class="mx-2 h-fit">
-          <a
-            href="https://github.com/jesse-gauthier"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="sub-heading-text text-lg font-medium hover-orange p-2"
-            >GitHub</a
-          >
+          <a href="https://github.com/jesse-gauthier" target="_blank" rel="noopener noreferrer"
+            class="sub-heading-text text-lg font-medium hover-orange p-2">GitHub</a>
         </li>
         <li class="mx-2 h-fit">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://codepen.io/jessegauthier1994"
-            class="sub-heading-text text-lg font-medium hover-orange p-2"
-            >CodePen</a
-          >
+          <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/jessegauthier1994"
+            class="sub-heading-text text-lg font-medium hover-orange p-2">CodePen</a>
         </li>
         <li class="mx-2 h-fit">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/jesse-gauthier-475a25168/"
-            class="sub-heading-text text-lg font-medium hover-orange p-2"
-            >LinkedIn</a
-          >
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jesse-gauthier-475a25168/"
+            class="sub-heading-text text-lg font-medium hover-orange p-2">LinkedIn</a>
         </li>
       </ul>
 
       <!-- Full-Screen Mobile Menu (Hidden by Default) -->
-      <div
-        v-if="isMenuOpen"
-        class="fixed inset-0 z-10 blue-bg md:hidden flex flex-col items-center justify-center"
-      >
-        <button
-          aria-label="Close menu"
-          class="absolute top-4 right-4"
-          @click="toggleMenu"
-        >
+      <div v-if="isMenuOpen" class="fixed inset-0 z-10 blue-bg md:hidden flex flex-col items-center justify-center">
+        <button aria-label="Close menu" class="absolute top-4 right-4" @click="toggleMenu">
           <svg viewBox="0 0 40 40" width="30" height="30">
-            <path
-              d="M 10,10 L 30,30 M 30,10 L 10,30"
-              stroke="black"
-              stroke-width="5"
-            ></path>
+            <path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="black" stroke-width="5"></path>
           </svg>
         </button>
         <ul class="text-center">
           <li class="block p-4 text-lg font-medium hover-orange">
-            <router-link
-              class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
-              to="/"
-              @click="toggleMenu"
-              >Home</router-link
-            >
+            <router-link class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]" to="/"
+              @click="toggleMenu">Home</router-link>
           </li>
           <li class="block p-4 text-lg font-medium hover-orange">
-            <router-link
-              class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
-              to="/projects"
-              @click="toggleMenu"
-              >Projects</router-link
-            >
+            <router-link class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]" to="/projects"
+              @click="toggleMenu">Projects</router-link>
           </li>
           <li class="block p-4 text-lg font-medium hover-orange">
-            <router-link
-              class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
-              to="/contact"
-              @click="toggleMenu"
-              >Contact</router-link
-            >
+            <router-link class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]" to="/contact"
+              @click="toggleMenu">Contact</router-link>
           </li>
 
           <li class="block p-4 text-lg font-medium hover-orange">
-            <a
-              class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
-              href="https://github.com/jesseagauthier"
-              @click="toggleMenu"
-              >GitHub</a
-            >
+            <a class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]" href="https://github.com/jesseagauthier"
+              @click="toggleMenu">GitHub</a>
           </li>
           <li class="block p-4 text-lg font-medium hover-orange">
-            <a
-              class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
-              href="https://codepen.io/jessegauthier1994"
-              @click="toggleMenu"
-              >CodePen</a
-            >
+            <a class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
+              href="https://codepen.io/jessegauthier1994" @click="toggleMenu">CodePen</a>
           </li>
           <li class="block p-4 text-lg font-medium hover-orange">
-            <a
-              class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
-              href="https://www.linkedin.com/in/jesse-gauthier-475a25168/"
-              @click="toggleMenu"
-              >LinkedIn</a
-            >
+            <a class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d] w-[100%]"
+              href="https://www.linkedin.com/in/jesse-gauthier-475a25168/" @click="toggleMenu">LinkedIn</a>
           </li>
         </ul>
       </div>
