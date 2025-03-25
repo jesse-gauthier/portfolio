@@ -13,8 +13,6 @@ const programmingLanguages = [
   "PHP",
   "HTML",
   "CSS",
-  "Python",
-  "TypeScript",
 ];
 const frameworksAndLibraries = [
   "Node.js",
@@ -27,8 +25,6 @@ const frameworksAndLibraries = [
   "Nuxt.js",
   "AppWrite",
   "SupaBase",
-  "Angular",
-  "Django",
 ];
 const toolsAndTechnologies = [
   "WordPress",
@@ -50,15 +46,13 @@ const toolsAndTechnologies = [
   "Gulp",
   "Responsive Design",
   "Agile Methodologies",
-  "Jenkins",
-  "Kubernetes",
 ];
 
 const experiences = [
   {
     title: "Senior Web Developer | Shopify Developer",
     company: "The County Cooperage",
-    period: "May 2023 - Present",
+    period: "May 2023 - May 2025",
     description: `
      Develop and implement web applications using HTML, CSS, JavaScript, jQuery, AJAX, and Shopify technologies to enhance user engagement and functionality. Debug cross-browser compatibility issues in IE, Chrome, Firefox, and Safari, ensuring a seamless user experience across major browsers. Research emerging technologies to identify new trends in web development, keeping projects up to date with the latest industry standards. Monitor page speed performance metrics through Google Analytics and Page Speed Insights, leading to optimized load times and better user retention. In addition to development, manage SEO strategies to improve site rankings on search engines, optimize content for keyword targeting, and enhance site structure for better crawlability.`,
     accomplishments: [
@@ -75,7 +69,7 @@ const experiences = [
   {
     title: "Wordpress Developer | UI Researcher",
     company: "GottaGo Ottawa",
-    period: "Jan 2024 - Present",
+    period: "Jan 2024 - May 2025",
     description: `
       Collaborated with a cross-functional team to define website objectives, aligning with the overall business strategy, resulting in a cohesive and effective online presence. 
       Implemented SEO best practices and site optimization, boosting site performance and increasing visibility on search engines. 
@@ -94,33 +88,6 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "John Doe",
-    position: "CEO at Company",
-    feedback:
-      "Jesse is a fantastic developer who always delivers high-quality work on time.",
-  },
-  {
-    name: "Jane Smith",
-    position: "Project Manager at Another Company",
-    feedback:
-      "Working with Jesse has been a pleasure. His attention to detail is unmatched.",
-  },
-];
-
-const projects = [
-  {
-    title: "Project One",
-    description: "A brief description of Project One.",
-    image: "/assets/project1.jpg",
-  },
-  {
-    title: "Project Two",
-    description: "A brief description of Project Two.",
-    image: "/assets/project2.jpg",
-  },
-];
 
 onMounted(() => {
   // Wait for the document to fully load before initializing AOS
@@ -160,28 +127,15 @@ useHead({
   <main class="flex flex-col gap-6">
     <div class="mt-12">
       <!-- About Section -->
-      <section
-        data-aos="fade-up"
-        id="about"
-        class="grid grid-cols-1 lg:grid-cols-4 gap-4"
-        aria-labelledby="tldr_title"
-      >
+      <section data-aos="fade-up" id="about" class="grid grid-cols-1 lg:grid-cols-4 gap-4" aria-labelledby="tldr_title">
         <div class="p-8 lg:col-span-2 flex justify-center flex-col gap-3">
-          <img
-            class="md:max-w-[70%] mx-auto rounded-lg"
-            src="/assets/profile.jpg"
-            alt="Profile picture of Jesse Gauthier"
-            loading="lazy"
-          />
+          <img class="md:max-w-[70%] mx-auto rounded-lg" src="/assets/profile.jpg"
+            alt="Profile picture of Jesse Gauthier" loading="lazy" />
         </div>
-        <div
-          id="intro"
-          class="flex flex-col leading-relaxed lg:col-span-2 h-[100%] gap-8 border-[#e89e1d] border-4 p-5"
-        >
+        <div id="intro"
+          class="flex flex-col leading-relaxed lg:col-span-2 h-[100%] gap-8 border-[#e89e1d] border-4 p-5 rounded-lg">
           <p class="text-black text-justify text-xl self-center">
-            <span class="font-semibold text-2xl mt-1 block"
-              >Hey, I'm Jesse.</span
-            >
+            <span class="font-semibold text-2xl mt-1 block">Hey, I'm Jesse.</span>
             <br />
             I'm a dynamic and detail-oriented Web Developer with extensive
             experience in designing, developing, and maintaining robust websites
@@ -202,22 +156,13 @@ useHead({
       </section>
 
       <!-- Education Section -->
-      <section
-        data-aos="fade-up"
-        id="education"
-        class="mt-10"
-        aria-labelledby="education_heading"
-      >
+      <section data-aos="fade-up" id="education" class="mt-10" aria-labelledby="education_heading">
         <h2 id="education_heading" class="text-2xl font-bold mb-4">
           Education
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-          <article
-            data-aos="fade-up"
-            v-for="edu in education"
-            :key="edu.program"
-            class="p-8 blue-bg text-center w-full md:basis-1/2 flex flex-col justify-center rounded-lg"
-          >
+          <article data-aos="fade-up" v-for="edu in education" :key="edu.program"
+            class="p-8 blue-bg text-center w-full md:basis-1/2 flex flex-col justify-center rounded-lg">
             <p v-if="edu.honours" class="font-bold text-xl">
               Dean's List Recipient
             </p>
@@ -231,24 +176,14 @@ useHead({
       </section>
 
       <!-- Skills Section -->
-      <section
-        data-aos="fade-up"
-        id="skills"
-        class="mt-10"
-        aria-labelledby="skills_heading"
-      >
+      <section data-aos="fade-up" id="skills" class="mt-10" aria-labelledby="skills_heading">
         <h2 id="skills_heading" class="text-2xl font-bold mb-4">My Stack</h2>
         <div class="p-6 blue-bg rounded-lg shadow-md">
           <div>
             <h3 class="text-xl font-bold mb-2">Programming Languages</h3>
             <ul class="flex flex-wrap gap-4 text-lg text-gray-700">
-              <li
-                v-for="language in programmingLanguages"
-                :key="language"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-              >
+              <li v-for="language in programmingLanguages" :key="language" data-aos="fade-up" data-aos-duration="1500"
+                class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300">
                 {{ language }}
               </li>
             </ul>
@@ -257,13 +192,9 @@ useHead({
           <div>
             <h3 class="text-xl font-bold mb-2">Frameworks and Libraries</h3>
             <ul class="flex flex-wrap gap-4 text-lg text-gray-700">
-              <li
-                v-for="framework in frameworksAndLibraries"
-                :key="framework"
-                data-aos="fade-up"
+              <li v-for="framework in frameworksAndLibraries" :key="framework" data-aos="fade-up"
                 data-aos-duration="1500"
-                class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-              >
+                class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300">
                 {{ framework }}
               </li>
             </ul>
@@ -272,13 +203,8 @@ useHead({
           <div>
             <h3 class="text-xl font-bold mb-2">Tools and Technologies</h3>
             <ul class="flex flex-wrap gap-4 text-lg text-gray-700">
-              <li
-                v-for="tool in toolsAndTechnologies"
-                :key="tool"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300"
-              >
+              <li v-for="tool in toolsAndTechnologies" :key="tool" data-aos="fade-up" data-aos-duration="1500"
+                class="bg-white p-2 rounded-md shadow-sm hover:bg-blue-100 transition duration-300">
                 {{ tool }}
               </li>
             </ul>
@@ -287,29 +213,15 @@ useHead({
       </section>
 
       <!-- Experience Section -->
-      <section
-        data-aos="fade-up"
-        id="experience"
-        class="mt-10"
-        aria-labelledby="experience_heading"
-      >
+      <section data-aos="fade-up" id="experience" class="mt-10" aria-labelledby="experience_heading">
         <h2 id="experience_heading" class="text-2xl font-bold mb-4">
           Experience
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-          <article
-            v-for="experience in experiences"
-            :key="experience.title"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            class="mb-6 flex"
-          >
+          <article v-for="experience in experiences" :key="experience.title" data-aos="fade-up" data-aos-duration="1500"
+            class="mb-6 flex">
             <div class="p-8 blue-bg rounded-lg">
-              <h3
-                class="text-2xl font-bold"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
+              <h3 class="text-2xl font-bold" data-aos="fade-up" data-aos-duration="1500">
                 {{ experience.title }}
               </h3>
               <p class="text-lg my-2 font-bold">{{ experience.company }}</p>
@@ -319,10 +231,7 @@ useHead({
                 <hr class="my-4" />
                 <h4 class="my-3 text-xl font-medium">Key Accomplishments:</h4>
                 <ul class="list-disc list-inside">
-                  <li
-                    v-for="accomplishment in experience.accomplishments"
-                    :key="accomplishment"
-                  >
+                  <li v-for="accomplishment in experience.accomplishments" :key="accomplishment">
                     {{ accomplishment }}
                   </li>
                 </ul>
