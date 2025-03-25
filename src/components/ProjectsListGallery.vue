@@ -5,67 +5,23 @@
       am most proud of. Each project showcases a variety of skills, ranging from
       web design to development and everything in between.
     </p>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-3 mt-2"
-    >
-      <router-link
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        class="btn btn-secondary"
-        to="react_contact_book"
-        >React Contact Book</router-link
-      >
-      <router-link
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        class="btn btn-secondary"
-        to="/pokemon_catcher"
-        >Pokemon Catcher</router-link
-      >
-      <router-link
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        class="btn btn-secondary"
-        to="password_generator"
-        >Password Generator</router-link
-      >
-      <router-link
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        class="btn btn-secondary"
-        to="pomodoro_timer"
-        >Pomodoro Timer</router-link
-      >
-      <router-link
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        class="btn btn-secondary"
-        to="/gotta_go_ottawa"
-        >Gotta Go Ottawa</router-link
-      >
-      <router-link
-        class="btn btn-secondary"
-        to="/the_county_cooperage"
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        >The County Cooperage</router-link
-      >
-      <router-link
-        class="btn btn-secondary"
-        to="/the_county_cooperage"
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        >Luma CRM</router-link
-      >
-      <a
-        class="btn btn-secondary"
-        href="https://github.com/jessegauthierhumber"
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        referrerpolicy=""
-        target="_blank"
-        >Check Github For Active Projects</a
-      >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-3 mt-2">
+      <router-link data-aos="fade-up" data-aos-duration="3000" class="btn btn-secondary" to="react_contact_book">React
+        Contact Book</router-link>
+      <router-link data-aos="fade-up" data-aos-duration="3000" class="btn btn-secondary" to="/pokemon_catcher">Pokemon
+        Catcher</router-link>
+      <router-link data-aos="fade-up" data-aos-duration="3000" class="btn btn-secondary"
+        to="password_generator">Password Generator</router-link>
+      <router-link data-aos="fade-up" data-aos-duration="3000" class="btn btn-secondary" to="pomodoro_timer">Pomodoro
+        Timer</router-link>
+      <router-link data-aos="fade-up" data-aos-duration="3000" class="btn btn-secondary" to="/gotta_go_ottawa">Gotta Go
+        Ottawa</router-link>
+      <router-link class="btn btn-secondary" to="/the_county_cooperage" data-aos="fade-up" data-aos-duration="3000">The
+        County Cooperage</router-link>
+      <router-link class="btn btn-secondary" to="/LumaCrm" data-aos="fade-up" data-aos-duration="3000">Luma
+        CRM</router-link>
+      <a class="btn btn-secondary" href="https://github.com/jesse-gauthier" data-aos="fade-up" data-aos-duration="3000"
+        referrerpolicy="" target="_blank">Check Github For Active Projects</a>
     </div>
   </div>
 </template>
