@@ -1,49 +1,73 @@
 <template>
-    <div data-aos="fade-up"
-        class="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 p-4 md:p-8 rounded-xl">
+    <div data-aos="fade-up" class="min-h-screen bg-neutral-100 dark:bg-dark text-dark  p-4 md:p-8 rounded-xl">
         <div class="flex justify-between">
             <router-link class="btn btn-warning w-100" to="/projects">Back To Projects</router-link>
-            <a class="btn bg-[#2b3d4f] text-white hover:bg-[#e89e1d]" href="https://thecountycooperage.ca/"
-                target="_blank" @click="fireGAEvent">Live Version</a>
+            <a class="btn btn-primary text-black" href="https://www.lumacrm.ca/login" target="_blank">Prototype
+                Preview</a>
         </div>
-        <div class="bg-[#e0ffff] block h-[1px] my-8"></div>
+        <div class="bg-secondary h-[1px] my-8"></div>
         <div class="max-w-4xl mx-auto">
-            <div class="flex flex-wrap flex-row-reverse justify-evenly">
-                <h2 data-aos-duration="3000" class="text-3xl md:text-5xl font-bold mb-4 text-center self-center">
-                    The County Cooperage
+            <div class="flex flex-wrap flex-row-reverse justify-evenly items-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 text-center self-center font-heading">
+                    LumaCRM
                 </h2>
-                <img src="/src/assets/projects/county_cooperage/thecountycooperage.png"
-                    alt="Screenshot of The County Cooperage website"
-                    class="w-[80%] md:w-1/2 lg:w-1/6 h-auto rounded-lg mb-4 md:mb-0" />
+                <img src="\assets\projects\lumacrm\logo.svg" alt="LumaCRM Interface Mockup"
+                    class="w-[80%] md:w-1/2 lg:w-1/3 h-auto rounded-lg mb-4 md:mb-0" />
             </div>
 
-            <p class="text-base md:text-lg my-4">
-                My work at The County Cooperage spanned over a year, where I managed
-                their Shopify e-commerce store. During this contract, I implemented a
-                custom Shopify theme built off a template. This newly created theme
-                resulted in a 120% month-over-month increase in new visitors and a 330%
-                increase in total sales. Additionally, I developed a store blog and
-                numerous landing pages to enhance SEO rankings. This initiative
-                significantly improved keyword positions, moving many from the mid-20s
-                to the top 5 results.
+            <p class="text-base md:text-lg my-4 font-body">
+                LumaCRM is a mobile-first Customer Relationship Management platform
+                designed to streamline lead management and team collaboration.
+                The project focused on creating an intuitive, efficient interface
+                that reduces cognitive load and enhances team productivity through
+                modern UI/UX design principles.
             </p>
-            <div class="flex flex-col">
-                <h3 class="text-xl md:text-3xl font-semibold mb-2">Website Stack</h3>
-                <div class="flex flex-wrap lg:flex-nowrap justify-evenly mt-8">
-                    <ul class="list-disc grid grid-cols-3 *:self-center">
-                        <li>Shopify</li>
-                        <li>Liquid</li>
-                        <li>PHP</li>
-                        <li>Tailwind</li>
-                        <li>JavaScript</li>
-                        <li>Aria Standards</li>
-                        <li>SEO</li>
-                        <li>BootStrap</li>
-                        <li>Klaviyo</li>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-xl md:text-3xl font-semibold mb-4 font-heading">Key Design Highlights</h3>
+                    <ul class="space-y-2 list-disc pl-5">
+                        <li>Mobile-first responsive design</li>
+                        <li>Drag-and-drop lead management</li>
+                        <li>Real-time collaboration features</li>
+                        <li>Intuitive messaging system</li>
+                        <li>Advanced analytics dashboard</li>
+                        <li>Accessible design (WCAG compliant)</li>
                     </ul>
-                    <img class="md:max-w-[400px] bg-white p-3 rounded-xl"
-                        src="/src/assets/projects/county_cooperage/thecountycooperage2.png"
-                        alt="Additional screenshot of The County Cooperage website" />
+                </div>
+                <div>
+                    <h3 class="text-xl md:text-3xl font-semibold mb-4 font-heading">Technology Stack</h3>
+                    <ul class="space-y-2 grid grid-cols-2 list-disc pl-5">
+                        <li>Vue.js</li>
+                        <li>Tailwind CSS</li>
+                        <li>Figma</li>
+                        <li>Responsive Design</li>
+                        <li>Accessibility Tools</li>
+                        <li>Micro-interactions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-xl md:text-3xl font-semibold mb-4 font-heading">Design System Highlights</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Color Palette</h4>
+                        <div class="flex space-x-2">
+                            <div class="w-12 h-12 bg-primary rounded-full" title="Primary: #774868"></div>
+                            <div class="w-12 h-12 bg-secondary rounded-full" title="Secondary: #D7C1E0"></div>
+                            <div class="w-12 h-12 bg-accent rounded-full" title="Accent: #F4A259"></div>
+                            <div class="w-12 h-12 bg-neutral rounded-full" title="Neutral: #FAF5F8"></div>
+                            <div class="w-12 h-12 bg-dark rounded-full" title="Dark: #1A1A22"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Typography</h4>
+                        <p>
+                            <span class="font-heading">Headings: Hanken Grotesk</span><br>
+                            <span class="font-body">Body: Inter</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,10 +89,10 @@ onMounted(() => {
 
 // Set the page title
 const { title } = useHead({
-    title: 'The County Cooperage - Project Details',
+    title: 'LumaCRM - Design Case Study',
 })
 
-// Fire Google Analytics event
+// Placeholder for potential analytics tracking
 function fireGAEvent() {
     if (window.ga) {
         window.ga('send', 'event', 'Link', 'click', `${title.value} link pressed`)
@@ -82,3 +106,7 @@ function fireGAEvent() {
     }
 }
 </script>
+
+<style scoped>
+/* Additional custom styles can be added here */
+</style>

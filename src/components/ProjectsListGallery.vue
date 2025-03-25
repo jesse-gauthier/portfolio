@@ -20,8 +20,8 @@
         County Cooperage</router-link>
       <router-link class="btn btn-secondary" to="/LumaCrm" data-aos="fade-up" data-aos-duration="3000">Luma
         CRM</router-link>
-      <a class="btn btn-secondary" href="https://github.com/jessegauthierhumber" data-aos="fade-up"
-        data-aos-duration="3000" referrerpolicy="" target="_blank">Check Github For Active Projects</a>
+      <a class="btn btn-secondary" href="https://github.com/jesse-gauthier" data-aos="fade-up" data-aos-duration="3000"
+        referrerpolicy="" target="_blank">Check Github For Active Projects</a>
     </div>
   </div>
 </template>
