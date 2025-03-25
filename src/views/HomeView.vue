@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 import { useHead } from "@unhead/vue";
-import ContactForm from "@/pages/ContactForm.vue";
+import ContactForm from "@/components/ContactForm.vue";
 import FooterComp from "@/components/FooterComp.vue"; // Import FooterComp
 
 import AOS from "aos";
